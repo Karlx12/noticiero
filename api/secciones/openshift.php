@@ -4,10 +4,10 @@ SUSTITUYE LAS XXX POR UN VALOR DE UNA NOTICIA DE INTERES EN ESTA CATEGORIA
 *****/
 
 $openshift = [
-"titulo" => "XXX",
-"autor" => "XXX",
-"resumen" => "XXX",
-"portada"=> "imagenes/image.png",
+"titulo" => "OpenShift lanza herramientas para gestionar clusters híbridos",
+"autor" => "Mónica Castillo",
+"resumen" => "Las nuevas utilidades facilitan la integración entre nubes públicas y on-premise, reduciendo complejidad en operaciones de TI.",
+"portada" => "image.png",
 
 ];
 ?>

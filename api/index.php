@@ -67,9 +67,17 @@ if (strpos($path, '/images/') === 0) {
 
       <?php
         include("secciones/portada.php");
-  // Base path for images once deployed as static assets (recommend placing images in `public/secciones/img`)
-  // Use an absolute path so the browser requests `/secciones/img/...`
-  $imgBase = "/secciones/";
+  // Base path for images once deployed as static assets (images moved to `static/imagenes`)
+  // Use an absolute path so the browser requests `/static/imagenes/...`
+  $imgBase = "/static/imagenes/";
+
+  // Helper to normalize stored paths. Many section files reference paths like "img/portada.png".
+  // imgUrl removes a leading "img/" if present and prefixes the public base.
+  function imgUrl($p) {
+    global $imgBase;
+    $clean = preg_replace('#^img/#', '', $p);
+    return $imgBase . $clean;
+  }
       ?>
       <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
         <div class="col-md-12 px-0">
@@ -83,7 +91,7 @@ if (strpos($path, '/images/') === 0) {
               echo $portada["resumen"];
             ?>
           </p>
-          <img src="<?php echo $imgBase . $portada["portada"]; ?>" alt="Portada" class="img-fluid">
+          <img src="<?php echo imgUrl($portada["portada"]); ?>" alt="Portada" class="img-fluid">
         </div>
       </div>
 
@@ -114,7 +122,7 @@ if (strpos($path, '/images/') === 0) {
                   echo $internacional["resumen"];
                 ?>
               </p>
-              <img src="<?php echo $imgBase . $internacional["portada"]; ?>" alt="Internacional" class="img-fluid">
+              <img src="<?php echo imgUrl($internacional["portada"]); ?>" alt="Internacional" class="img-fluid">
             </div>
           </div>
         </div>
@@ -139,7 +147,7 @@ if (strpos($path, '/images/') === 0) {
                   echo $nacional["resumen"];
                 ?>
               </p>
-              <img src="<?php echo $imgBase . $nacional["portada"]; ?>" alt="Nacional" class="img-fluid">
+              <img src="<?php echo imgUrl($nacional["portada"]); ?>" alt="Nacional" class="img-fluid">
             </div>
           </div>
         </div>
@@ -173,7 +181,7 @@ if (strpos($path, '/images/') === 0) {
                   echo $economia["resumen"];
                 ?>
               </p>
-              <img src="<?php echo $imgBase . $economia["portada"]; ?>" alt="Economía" class="img-fluid">
+              <img src="<?php echo imgUrl($economia["portada"]); ?>" alt="Economía" class="img-fluid">
 
             </div>
           </div>
@@ -199,7 +207,7 @@ if (strpos($path, '/images/') === 0) {
                   echo $opinion["resumen"];
                 ?>
               </p>
-              <img src="<?php echo $imgBase . $opinion["portada"]; ?>" alt="Opinión" class="img-fluid">
+              <img src="<?php echo imgUrl($opinion["portada"]); ?>" alt="Opinión" class="img-fluid">
             </div>
           </div>
         </div>
@@ -233,7 +241,7 @@ if (strpos($path, '/images/') === 0) {
                   echo $tecnologia["resumen"];
                 ?>
               </p>
-              <img src="<?php echo $imgBase . $tecnologia["portada"]; ?>" alt="Tecnología" class="img-fluid">
+              <img src="<?php echo imgUrl($tecnologia["portada"]); ?>" alt="Tecnología" class="img-fluid">
             </div>
           </div>
         </div>
@@ -258,7 +266,7 @@ if (strpos($path, '/images/') === 0) {
                   echo $ciencia["resumen"];
                 ?>
               </p>
-              <img src="<?php echo $imgBase . $ciencia["portada"]; ?>" alt="Ciencia" class="img-fluid">
+              <img src="<?php echo imgUrl($ciencia["portada"]); ?>" alt="Ciencia" class="img-fluid">
             </div>
           </div>
         </div>
@@ -292,7 +300,7 @@ if (strpos($path, '/images/') === 0) {
                   echo $cultura["resumen"];
                 ?>
               </p>
-              <img src="<?php echo $imgBase . $cultura["portada"]; ?>" alt="Cultura" class="img-fluid">
+              <img src="<?php echo imgUrl($cultura["portada"]); ?>" alt="Cultura" class="img-fluid">
             </div>
           </div>
         </div>
@@ -317,7 +325,7 @@ if (strpos($path, '/images/') === 0) {
                   echo $gente["resumen"];
                 ?>
               </p>
-              <img src="<?php echo $imgBase . $gente["portada"]; ?>" alt="Gente" class="img-fluid">
+              <img src="<?php echo imgUrl($gente["portada"]); ?>" alt="Gente" class="img-fluid">
             </div>
           </div>
         </div>
@@ -352,7 +360,7 @@ if (strpos($path, '/images/') === 0) {
                   echo $deportes["resumen"];
                 ?>
               </p>
-              <img src="<?php echo $imgBase . $deportes["portada"]; ?>" alt="Deportes" class="img-fluid">
+              <img src="<?php echo imgUrl($deportes["portada"]); ?>" alt="Deportes" class="img-fluid">
             </div>
           </div>
         </div>
@@ -377,7 +385,7 @@ if (strpos($path, '/images/') === 0) {
                   echo $television["resumen"];
                 ?>
               </p>
-              <img src="<?php echo $imgBase . $television["portada"]; ?>" alt="Televisión" class="img-fluid">
+              <img src="<?php echo imgUrl($television["portada"]); ?>" alt="Televisión" class="img-fluid">
             </div>
           </div>
         </div>
@@ -402,7 +410,7 @@ if (strpos($path, '/images/') === 0) {
                   echo $video["resumen"];
                 ?>
               </p>
-              <img src="<?php echo $imgBase . $video["portada"]; ?>" alt="Video" class="img-fluid">
+              <img src="<?php echo imgUrl($video["portada"]); ?>" alt="Video" class="img-fluid">
             </div>
           </div>
         </div>
@@ -437,7 +445,7 @@ if (strpos($path, '/images/') === 0) {
                   echo $formacion["resumen"];
                 ?>
               </p>
-              <img src="<?php echo $imgBase . $formacion["portada"]; ?>" alt="Formación" class="img-fluid">
+              <img src="<?php echo imgUrl($formacion["portada"]); ?>" alt="Formación" class="img-fluid">
             </div>
           </div>
         </div>
@@ -462,7 +470,7 @@ if (strpos($path, '/images/') === 0) {
                   echo $empleo["resumen"];
                 ?>
               </p>
-              <img src="<?php echo $imgBase . $empleo["portada"]; ?>" alt="Empleo" class="img-fluid">
+              <img src="<?php echo imgUrl($empleo["portada"]); ?>" alt="Empleo" class="img-fluid">
             </div>
           </div>
         </div>
@@ -487,7 +495,7 @@ if (strpos($path, '/images/') === 0) {
                   echo $sociedad["resumen"];
                 ?>
               </p>
-              <img src="<?php echo $imgBase . $sociedad["portada"]; ?>" alt="Sociedad" class="img-fluid">
+              <img src="<?php echo imgUrl($sociedad["portada"]); ?>" alt="Sociedad" class="img-fluid">
             </div>
           </div>
         </div>
@@ -521,7 +529,7 @@ if (strpos($path, '/images/') === 0) {
                   echo $openstack["resumen"];
                 ?>
               </p>
-              <img src="<?php echo $imgBase . $openstack["portada"]; ?>" alt="OpenStack" class="img-fluid">
+              <img src="<?php echo imgUrl($openstack["portada"]); ?>" alt="OpenStack" class="img-fluid">
             </div>
           </div>
         </div>
@@ -546,7 +554,7 @@ if (strpos($path, '/images/') === 0) {
                   echo $git["resumen"];
                 ?>
               </p>
-              <img src="<?php echo $imgBase . $git["portada"]; ?>" alt="Git" class="img-fluid">
+              <img src="<?php echo imgUrl($git["portada"]); ?>" alt="Git" class="img-fluid">
             </div>
           </div>
         </div>
@@ -580,7 +588,7 @@ if (strpos($path, '/images/') === 0) {
                   echo $contenedores["resumen"];
                 ?>
               </p>
-              <img src="<?php echo $imgBase . $contenedores["portada"]; ?>" alt="Contenedores" class="img-fluid">
+              <img src="<?php echo imgUrl($contenedores["portada"]); ?>" alt="Contenedores" class="img-fluid">
             </div>
           </div>
         </div>
@@ -605,7 +613,7 @@ if (strpos($path, '/images/') === 0) {
                   echo $openshift["resumen"];
                 ?>
               </p>
-              <img src="<?php echo $imgBase . $openshift["portada"]; ?>" alt="OpenShift" class="img-fluid">
+              <img src="<?php echo imgUrl($openshift["portada"]); ?>" alt="OpenShift" class="img-fluid">
             </div>
           </div>
         </div>
