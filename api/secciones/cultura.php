@@ -7,7 +7,7 @@ $cultura = [
 "titulo" => "XXX",
 "autor" => "XXX",
 "resumen" => "XXX",
-"portada"=> "/imagenes/image.png",
+"portada"=> "imagenes/image.png",
 
 ];
 ?>
