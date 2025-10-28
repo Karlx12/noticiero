@@ -7,5 +7,7 @@ $formacion = [
 "titulo" => "XXX",
 "autor" => "Gabinete de comunicación",
 "resumen" => "XXX",
+"portada"=> "img/image.png",
+
 ];
 ?>
