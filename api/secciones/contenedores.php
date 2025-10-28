@@ -7,6 +7,6 @@ $contenedores = [
 "titulo" => "XXX",
 "autor" => "XXX",
 "resumen" => "XXX",
-"portada"=> "img/image.png",
+"portada"=> "/imagenes/image.png",
 ];
 ?>
