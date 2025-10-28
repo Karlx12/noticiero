@@ -31,8 +31,9 @@
 
       <?php
         include("secciones/portada.php");
-        // Base path for images stored under api/secciones/img/
-        $imgBase = "secciones/";
+  // Base path for images once deployed as static assets (recommend placing images in `public/secciones/img`)
+  // Use an absolute path so the browser requests `/secciones/img/...`
+  $imgBase = "/secciones/";
       ?>
       <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
         <div class="col-md-12 px-0">

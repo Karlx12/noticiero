@@ -5,6 +5,7 @@
     }
   },
   "routes": [
+    { "src": "/(.*\\.(?:png|jpe?g|gif|svg|css|js))$", "dest": "/$1" },
     { "src": "/(.*)",  "dest": "/api/index.php" }
   ]
 }
