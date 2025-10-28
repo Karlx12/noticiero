@@ -7,6 +7,6 @@ $portada = [
 "titulo" => "Portada",
 "autor" => "jperez",
 "resumen" => "Las noticias mas importantes del 2025",
-"portada" => "imagenes/portada.png",
+"portada" => "portada.png",
 ];
 ?>
