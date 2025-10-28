@@ -44,6 +44,7 @@
               echo $portada["resumen"];
             ?>
           </p>
+          <img src="<?php echo $portada["portada"]; ?>" alt="Portada" class="img-fluid">
         </div>
       </div>
 
@@ -74,6 +75,7 @@
                   echo $internacional["resumen"];
                 ?>
               </p>
+              <img src="<?php echo $internacional["portada"]; ?>" alt="Internacional" class="img-fluid">
             </div>
           </div>
         </div>
@@ -98,6 +100,7 @@
                   echo $nacional["resumen"];
                 ?>
               </p>
+              <img src="<?php echo $nacional["portada"]; ?>" alt="Nacional" class="img-fluid">
             </div>
           </div>
         </div>
@@ -131,6 +134,8 @@
                   echo $economia["resumen"];
                 ?>
               </p>
+              <img src="<?php echo $economia["portada"]; ?>" alt="Economía" class="img-fluid">
+
             </div>
           </div>
         </div>
@@ -155,6 +160,7 @@
                   echo $opinion["resumen"];
                 ?>
               </p>
+              <img src="<?php echo $opinion["portada"]; ?>" alt="Opinión" class="img-fluid">
             </div>
           </div>
         </div>
@@ -188,6 +194,7 @@
                   echo $tecnologia["resumen"];
                 ?>
               </p>
+              <img src="<?php echo $tecnologia["portada"]; ?>" alt="Tecnología" class="img-fluid">
             </div>
           </div>
         </div>
@@ -212,6 +219,7 @@
                   echo $ciencia["resumen"];
                 ?>
               </p>
+              <img src="<?php echo $ciencia["portada"]; ?>" alt="Ciencia" class="img-fluid">
             </div>
           </div>
         </div>
@@ -245,6 +253,7 @@
                   echo $cultura["resumen"];
                 ?>
               </p>
+              <img src="<?php echo $cultura["portada"]; ?>" alt="Cultura" class="img-fluid">
             </div>
           </div>
         </div>
@@ -269,6 +278,7 @@
                   echo $gente["resumen"];
                 ?>
               </p>
+              <img src="<?php echo $gente["portada"]; ?>" alt="Gente" class="img-fluid">
             </div>
           </div>
         </div>
@@ -303,6 +313,7 @@
                   echo $deportes["resumen"];
                 ?>
               </p>
+              <img src="<?php echo $deportes["portada"]; ?>" alt="Deportes" class="img-fluid">
             </div>
           </div>
         </div>
@@ -327,6 +338,7 @@
                   echo $television["resumen"];
                 ?>
               </p>
+              <img src="<?php echo $television["portada"]; ?>" alt="Televisión" class="img-fluid">
             </div>
           </div>
         </div>
@@ -351,6 +363,7 @@
                   echo $video["resumen"];
                 ?>
               </p>
+              <img src="<?php echo $video["portada"]; ?>" alt="Video" class="img-fluid">
             </div>
           </div>
         </div>
@@ -385,6 +398,7 @@
                   echo $formacion["resumen"];
                 ?>
               </p>
+              <img src="<?php echo $formacion["portada"]; ?>" alt="Formación" class="img-fluid">
             </div>
           </div>
         </div>
@@ -409,6 +423,7 @@
                   echo $empleo["resumen"];
                 ?>
               </p>
+              <img src="<?php echo $empleo["portada"]; ?>" alt="Empleo" class="img-fluid">
             </div>
           </div>
         </div>
@@ -433,6 +448,7 @@
                   echo $sociedad["resumen"];
                 ?>
               </p>
+              <img src="<?php echo $sociedad["portada"]; ?>" alt="Sociedad" class="img-fluid">
             </div>
           </div>
         </div>
@@ -466,6 +482,7 @@
                   echo $openstack["resumen"];
                 ?>
               </p>
+              <img src="<?php echo $openstack["portada"]; ?>" alt="OpenStack" class="img-fluid">
             </div>
           </div>
         </div>
@@ -490,6 +507,7 @@
                   echo $git["resumen"];
                 ?>
               </p>
+              <img src="<?php echo $git["portada"]; ?>" alt="Git" class="img-fluid">
             </div>
           </div>
         </div>
@@ -523,6 +541,7 @@
                   echo $contenedores["resumen"];
                 ?>
               </p>
+              <img src="<?php echo $contenedores["portada"]; ?>" alt="Contenedores" class="img-fluid">
             </div>
           </div>
         </div>
@@ -547,6 +566,7 @@
                   echo $openshift["resumen"];
                 ?>
               </p>
+              <img src="<?php echo $openshift["portada"]; ?>" alt="OpenShift" class="img-fluid">
             </div>
           </div>
         </div>
